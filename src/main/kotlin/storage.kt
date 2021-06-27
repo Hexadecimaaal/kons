@@ -1,5 +1,4 @@
 import com.beust.klaxon.Klaxon
-import javafx.collections.ObservableList
 import java.io.File
 import java.nio.file.*
 
@@ -19,5 +18,5 @@ class FileStorage(val rootdir : Path) { inner class Item(val name : String) {
   fun getAttr() : Attrs = if(!Files.exists(attrFile)) Attrs() else Klaxon().parse<Attrs>(attrFile.toFile()) ?: Attrs()
 }
 
-  fun listObjects() : ObservableList<Object> = TODO()
+  //fun listObjects() : ObservableList<Object> = TODO()
 }
